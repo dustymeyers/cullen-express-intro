@@ -17,3 +17,5 @@ Gonna be great... :
 
 - .gitignore
 - Tell this file to ignore node_modules
+
+5. now we need ot install body-parser: npm install body-parser
