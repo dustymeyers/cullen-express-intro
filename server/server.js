@@ -7,6 +7,11 @@ const express = require('express');
 const app = express();
 
 const port = 5000;
+
+// INCANTATION:
+// Share any files inside the "./server/public" folder
+app.use(express.static('server/public'));
+
 // Listen for network requests
 // first argument is a port number
 // the number that we are using is the port number we choose, it should be at least 3000 but can technically be kittyKat

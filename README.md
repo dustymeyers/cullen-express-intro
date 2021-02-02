@@ -23,8 +23,9 @@ Gonna be great... :
 
 - add a server directory and a server.js file within it
 - When you type localhost:5000 (or whatever port number you gave), you'll first get an error: "cannot GET /"
-
   - simply because we have no files to grab yet
+
+7. Add a public file to put in your html.index and anything you'd want to send out to your users
 
 - ^C will stop your sever if you need to restart it
 - if you get code: 'EADDRINUSE' error
