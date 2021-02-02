@@ -30,6 +30,11 @@ Gonna be great... :
 - anything you want to share must be in that public folder, can be in a directory within public
 - THESE ARE CLIENT SIDE
 
+8. You can set up a simpler way to get your code up in running
+
+- Open package.json and add "start": "node ./server/server.js" to scripts make sure to add a comma before!
+- now you can start your server with npm start
+
 - ^C will stop your sever if you need to restart it
 - if you get code: 'EADDRINUSE' error
   - you've probably got the server running in a second terminal or someone is already listening on that port
