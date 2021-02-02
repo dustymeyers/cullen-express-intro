@@ -1,0 +1,12 @@
+body {
+  background-color: midnightblue;
+  color: white;
+}
+#landing-page-h1 {
+  text-align: center;
+}
+#memes-for-days {
+  display: block;
+  width: 30%;
+  margin: auto;
+}
