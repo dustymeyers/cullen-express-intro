@@ -27,7 +27,12 @@ Gonna be great... :
 
 7. Add a public file to put in your html.index and anything you'd want to send out to your users
 
+- anything you want to share must be in that public folder, can be in a directory within public
+- THESE ARE CLIENT SIDE
+
 - ^C will stop your sever if you need to restart it
 - if you get code: 'EADDRINUSE' error
   - you've probably got the server running in a second terminal or someone is already listening on that port
   - run: killall -9 node
+- if you are pulling from another repo, you'll need to install node_modules again, but you can run npm install for that
+- big errors if you put spaces in you file or directory names
