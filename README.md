@@ -18,4 +18,15 @@ Gonna be great... :
 - .gitignore
 - Tell this file to ignore node_modules
 
-5. now we need ot install body-parser: npm install body-parser
+5. now we need to install body-parser: npm install body-parser
+6. Now you are ready to start your server!
+
+- add a server directory and a server.js file within it
+- When you type localhost:5000 (or whatever port number you gave), you'll first get an error: "cannot GET /"
+
+  - simply because we have no files to grab yet
+
+- ^C will stop your sever if you need to restart it
+- if you get code: 'EADDRINUSE' error
+  - you've probably got the server running in a second terminal or someone is already listening on that port
+  - run: killall -9 node
