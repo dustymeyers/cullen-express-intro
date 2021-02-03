@@ -47,3 +47,35 @@ Gonna be great... :
 - body-parser is now apart of the express package
 - You'll want to keep your modules separate for business data etc.
   - makes testing easier
+
+## API
+
+API = "Application Program Interface"
+
+Web server (eg. a Node.js server) with endpoints (ie. "URLs") that can receive or send data.
+
+### GET /quotes
+
+Returns a new quote, every time you hit it.
+
+Like so:
+
+```json
+{
+  "quote": "Something pithy",
+  "author": "someone smart"
+}
+```
+
+### POST /quotes
+
+Create a new quote, like
+
+```json
+{
+  "quote_to_add": {
+    "quote": "Something pithy",
+    "author": "someone smart"
+  }
+}
+```

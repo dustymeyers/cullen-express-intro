@@ -37,9 +37,42 @@ app.listen(port, function () {
 // if you are asking for quotes, this is the function we want to run
 // acts more like an event handler than a conditional (res.send is a replacement for return in this instance)
 // '/quotes' acts like an address that points back to line 5
+// /quotes is the url or path, could be referred to as the Endpoint
+// get endpoint
 app.get('/quotes', function (req, res) {
   console.log('GET Request for quotes');
   // must end your api functions in send or end
   // res is a parameter of your get method
-  res.send(quotes());
+  res.send(quotes.getNextQuote());
+});
+
+// post is our method that is going to send data to the server
+// the data that we are sending is called the body
+
+
+/* 
+Post /quotes endpoint 
+
+Accepts a body like:
+{
+  "quote_to_add": {
+      "author": "Mongo",
+      "quote": "Mongo is just pawn in game of life."
+  }
+}
+ */
+Will Add to list of quotes
+// post endpoint
+app.post('/quotes', (req, res) => {
+  // req.body comes from body parser
+  // if it says req.body is not defined, you're probably missing body parser
+  let quote = req.body.quote_to_add;
+  console.log(quote.author);
+  console.log(quote.quote);
+
+  // TODO: Add to quotesData
+  quotes.addQuote(quote);
+  // TODO: Respond with something!
+  // number represents the error value
+  res.sendStatus(200);
 });
