@@ -50,7 +50,7 @@ app.get('/quotes', function (req, res) {
  *
  * Return an arrayw with all the quotes in it
  */
-app.get('/alltheQuotes', (req, res) => {
+app.get('/allTheQuotes', (req, res) => {
   console.log('GET /allTheQuotes');
 
   res.send(quotes.quoteList);
@@ -77,6 +77,7 @@ Will Add to list of quotes
  */
 // post endpoint
 app.post('/quotes', (req, res) => {
+  console.log('req.body', req.body);
   // req.body comes from body parser
   // if it says req.body is not defined, you're probably missing body parser
   let quote = req.body.quote_to_add;

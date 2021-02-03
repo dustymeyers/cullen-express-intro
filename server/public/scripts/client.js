@@ -22,6 +22,21 @@ function onSubmit(event) {
     author: $('#authorInput').val(),
   };
   console.log('newQuote', newQuote);
+
+  // POST quote data to server
+  $.ajax({
+    data: {
+      quote_to_add: newQuote,
+    },
+    url: '/quotes',
+    method: 'POST',
+  })
+    .then(function (response) {
+      console.log('You did it!');
+    })
+    .catch(function (error) {
+      console.log('wah wah', error);
+    });
 }
 
 function fetchQuotes() {
