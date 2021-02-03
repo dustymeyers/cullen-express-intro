@@ -49,7 +49,6 @@ app.get('/quotes', function (req, res) {
 // post is our method that is going to send data to the server
 // the data that we are sending is called the body
 
-
 /* 
 Post /quotes endpoint 
 
@@ -60,8 +59,8 @@ Accepts a body like:
       "quote": "Mongo is just pawn in game of life."
   }
 }
- */
 Will Add to list of quotes
+ */
 // post endpoint
 app.post('/quotes', (req, res) => {
   // req.body comes from body parser
