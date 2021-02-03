@@ -51,4 +51,8 @@ function addQuote(quoteData) {
 // current vs of js allows us to use just one name for our exported functions if they are the same as the key
 // i.e. this would look like module.exports = { getNextQuote: getNextQuote, addQuote: addQuote };
 
-module.exports = { getNextQuote, addQuote };
+module.exports = {
+  getNextQuote: getNextQuote,
+  addQuote: addQuote,
+  quoteList: quotesData,
+};

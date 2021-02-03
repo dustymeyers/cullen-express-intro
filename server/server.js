@@ -46,6 +46,16 @@ app.get('/quotes', function (req, res) {
   res.send(quotes.getNextQuote());
 });
 
+/* GET /allTheQuote
+ *
+ * Return an arrayw with all the quotes in it
+ */
+app.get('/alltheQuotes', (req, res) => {
+  console.log('GET /allTheQuotes');
+
+  res.send(quotes.quoteList);
+});
+
 // post is our method that is going to send data to the server
 // the data that we are sending is called the body
 
