@@ -56,6 +56,10 @@ app.get('/alltheQuotes', (req, res) => {
   res.send(quotes.quoteList);
 });
 
+app.get('/cool-things', function (req, res) {
+  res.send('<h1>Cool things</h1>');
+});
+
 // post is our method that is going to send data to the server
 // the data that we are sending is called the body
 
