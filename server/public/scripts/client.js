@@ -24,11 +24,26 @@ function onReady() {
   }) // (the rest written as a chain)
     // this is called a promise
     // promise to call me back later, plz
-    .then(function (response) {
-      console.log('this is our response', response);
-    });
+    .then(function (quoteList) {
+      console.log('this is our response', quoteList);
 
-  // Take array of quotes
-  // loop d' loop through em
-  // and .append() to the DOM
+      //
+      // Take array of quotes
+      // loop d' loop through em
+      for (let quote of quoteList) {
+        $('#quotes-list').append(`
+          <li>
+            <blockquote>
+              ${quote.quote}
+              -- By ${quote.author}
+            </blockquote>
+          </li>
+        `);
+      }
+      // and .append() to the DOM
+    })
+    // adds a message if there is a problem retrieving the data
+    .catch(function () {
+      $('#messages').text("You're looking in Alderaan places.");
+    });
 }
