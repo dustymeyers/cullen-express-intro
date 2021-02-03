@@ -6,7 +6,25 @@ function onReady() {
 
   // Grab that data from the server
   // Get /allTheQuotes
+  fetchQuotes();
 
+  $(document).on('submit', '#newQuoteForm', onSubmit);
+  console.log('so much to do, so little time...');
+}
+
+function onSubmit(event) {
+  event.preventDefault();
+  console.log('onSubmit');
+
+  // Grab data from form inputs
+  let newQuote = {
+    quote: $('#quoteInput').val(),
+    author: $('#authorInput').val(),
+  };
+  console.log('newQuote', newQuote);
+}
+
+function fetchQuotes() {
   // Use Ajax!
   // What is AJAX?
   // "Asynchronous Javascript and XML"
