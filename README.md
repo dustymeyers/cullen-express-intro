@@ -38,6 +38,12 @@ Gonna be great... :
 - ^C will stop your sever if you need to restart it
 - if you get code: 'EADDRINUSE' error
   - you've probably got the server running in a second terminal or someone is already listening on that port
-  - run: killall -9 node
+  - run: `killall -9 node`
 - if you are pulling from another repo, you'll need to install node_modules again, but you can run npm install for that
 - big errors if you put spaces in you file or directory names
+
+## LEVEL UP
+
+- body-parser is now apart of the express package
+- You'll want to keep your modules separate for business data etc.
+  - makes testing easier
